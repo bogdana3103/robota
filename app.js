@@ -1,21 +1,23 @@
-
+var first__value = document.getElementById("first__value");
+var second__value = document.getElementById("second__value");
+var display = document.getElementById("content");
 
 function fizzBuzz ( firstNum, secondNum ) {
     for (var i = firstNum; i < secondNum; i++) {
-
         if (i%3 === 0 && i%5 === 0) {
-            document.write('thirty-five <br/>');
+            display.innerHTML += 'thirty-five <br/>';
         } else if (i%5 === 0) {
-            document.write('five')
+            display.innerHTML += 'five <br/>';
         } else if (i%3 === 0 ) {
-            document.write('tree') 
+            display.innerHTML += 'tree  <br/>';
         } else {
-            document.write(i + '<br/>');
+            display.innerHTML += i + '<br/>';
         }
-        
-    
     }
 }
 
-fizzBuzz ( 20, 30)
+
+function submitInput () {
+    fizzBuzz(first__value.value, second__value.value)
+}
 
